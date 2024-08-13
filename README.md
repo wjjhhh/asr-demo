@@ -8,3 +8,8 @@
 3. NL/index：为NLP处理函数
 4. ASR/iat.js，recorder.onStop的函数回调，用于执行NLP会话接口。具体的，resultText是拾语结束后的文本
 5. NL/index，getAnswerFromDify是NLP会话接口，接入企业内模型问答服务或者各种商用大模型或者，看产品设计
+
+# 3、注意事项
+1. 点击开始唤醒的按钮后会一直拾音，使用了Web Speech API，其依赖谷歌服务，需使用科学上网
+2. 唤醒词是【小影】，匹配逻辑在isMatch，里面的命中算法按需优化
+
