@@ -80,10 +80,11 @@ const wake = () => {
   recognition.lang = "zh-CN";
   recognition.start();
 };
+
+wake()
 </script>
 
 <template>
-  <button @click="wake" class="wake-button">开始持续唤醒</button>
   <button @click="start" :disabled="!['CLOSED', 'UNDEFINED'].includes(status)">开始拾音</button>
   <button @click="stop" :disabled="status !== 'OPEN'">结束拾音</button>
   状态: {{ status }}
@@ -94,12 +95,5 @@ const wake = () => {
 <style scoped>
 textarea {
   width: 400px;
-}
-.wake-button {
-  position: absolute;
-  left: 0;
-  top: 0;
-  background: #000;
-  color: #fff;
 }
 </style>
